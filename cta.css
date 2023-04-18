@@ -1,0 +1,108 @@
+.cta {
+  display: flex;
+  flex-direction: column;
+  width: fit-content;
+  margin-top: 10%;
+  margin-left: 150px;
+  height: fit-content;
+  font-size: var(--font-size-xl);
+}
+
+  .use-the-latest1 {
+    margin: 0;
+    color: var(--color-lightgray);
+  }
+  .subtitle {
+    font-size: var(--font-size-5xl);
+    letter-spacing: -0.04em;
+    display: inline-block;
+    margin-top: 0;
+  }
+  .cta-text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    text-align: left;
+    font-size: var(--font-size-61xl);
+  }
+
+  .license {
+    font-size: var(--font-size-xl);
+    text-decoration: line-through;
+    letter-spacing: -0.04em;
+    font-weight: 600;
+    font-family: var(--font-inter);
+    color: var(--color-white);
+    text-align: center;
+    display: inline-block;
+    width: 9.75rem;
+    height: 1.5rem;
+  }
+
+  .discord {
+    position: relative;
+    letter-spacing: -0.04em;
+    text-decoration: none;
+    color: white;
+    width: 11.25rem;
+    border: 1px solid white;
+    height: 3.5rem;
+    border-radius: var(--br-3xs);
+    line-height: 3.5rem;
+  }
+  
+  .actions {
+    display: flex;
+    margin-top: 20px;
+    flex-direction: row;
+    align-items: center;
+    width: max-content;
+    justify-content: center;
+    gap: var(--gap-13xl);
+  }
+  .title {
+    line-height: 5.63rem;
+    display: block;
+    width: 21.93rem;
+  }
+
+  @media screen and (max-width: 960px) {
+    .cta {
+      margin-left: 0;
+    }
+    .cta-text {
+      text-align: center;
+    }
+    .title {
+      margin: auto;
+      font-size: 5rem;
+    }
+    .actions {
+      flex-direction: column;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .actions button, .actions a {
+      width: 11.25rem;
+    }
+    .use-the-latest1 br{
+      display: none;
+    }
+  }
+
+  @media screen and (max-width: 420px) {
+    .title {
+      line-height: 4rem;
+      font-size: 3.5rem;
+    }
+    .subtitle {
+      font-size: 1.5rem;
+    }
+
+    .actions button, .actions a {
+      width: calc(100vw - 20px);
+    }
+
+  }
