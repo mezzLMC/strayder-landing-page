@@ -93,13 +93,6 @@ a:hover {
   display: flex;
   flex-direction: row;
 }
-.attribut7 {
-  right: 0;
-  bottom: 0;
-  width: 9.75rem;
-  height: 4.25rem;
-  text-align: center;
-}
 .attribute-bottomright {
   width: max-content;
   gap: 20px;
@@ -118,18 +111,20 @@ a:hover {
 }
 
 .attribute-container {
-  height: 100%;
   position: relative;
-  width: max-content;
+  right: 5%;
+  height: calc(100% - 30px);
+  width: calc(50vw - 5%);
   flex-direction: column;
   align-items: flex-end;
 }
 
 .attributes {
   position: absolute;
-  right: 50px;
+  right: 0;
+  width: max-content;
   gap: 20px;
-  bottom: 60px;
+  bottom: 20px;
 }
 
 .attribute-list {
@@ -150,23 +145,35 @@ a:hover {
   flex-shrink: 0;
   cursor: pointer;
 }
-.left-button1:hover, .discord:hover {
-  text-decoration: none;
-  transform: scale(1.01);
+
+.left-button1[disabled] {
+  opacity: 0.5;
+  cursor: not-allowed;
 }
 
-.left-button1:active, .left-button1:active {
+.left-button1:not(:disabled):hover, .discord:hover {
+  text-decoration: none;
+  transform: scale(1.05);
+}
+
+.left-button1:not(:disabled):hover, .discord:active {
   transform: scale(0.98);
 }
 
-iframe {
+.frame-wrap {
   z-index: 10;
-  top: -10%;
+  top: -15%;
   position: absolute;
   left: 60%;
   width: 40%;
   height: 110%;
   overflow: hidden;
+}
+
+iframe {
+  width: 110%;
+  height: 110%;
+  border: 0;
 }
 
 @media screen and (max-width: 960px) {
@@ -176,7 +183,7 @@ iframe {
   body {
     overflow: scroll;
   }
-  iframe {
+  .frame-wrap {
     display: none;
   }
   .attributes {

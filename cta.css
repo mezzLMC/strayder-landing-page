@@ -29,7 +29,6 @@
 
   .license {
     font-size: var(--font-size-xl);
-    text-decoration: line-through;
     letter-spacing: -0.04em;
     font-weight: 600;
     font-family: var(--font-inter);
@@ -46,7 +45,6 @@
     text-decoration: none;
     color: white;
     width: 11.25rem;
-    border: 1px solid white;
     height: 3.5rem;
     border-radius: var(--br-3xs);
     line-height: 3.5rem;
@@ -90,6 +88,15 @@
     .use-the-latest1 br{
       display: none;
     }
+  }
+  
+  button:disabled,
+  button[disabled] {
+    cursor: not-allowed;
+  }
+
+  button:disabled div {
+    text-decoration: line-through;
   }
 
   @media screen and (max-width: 420px) {
