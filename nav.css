@@ -14,8 +14,7 @@
     width: 80px;
     position: absolute;
     left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
+    transform: translateX(-50%);
     animation-fill-mode: forwards;
   }
 
@@ -43,8 +42,6 @@
     display: none;
     position: absolute;
     right: 5px;
-    top: 50%;
-    transform: translateY(-50%);
   }
   .links-buttons1,
   .navbar {
@@ -80,7 +77,8 @@
       display: block;
     }
     .navbar {
-      top: 60px;
+      height: 80px;
+      z-index: 1000;
     }
     .favi {
       display: block;

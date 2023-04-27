@@ -39,6 +39,9 @@ main {
   height: 100vh;
   overflow-x: hidden;
   text-align: center;
+  background-image: url(./public/hue-circle1.svg);
+  background-size: 200% 200%;
+  background-position: 100% 0%;
   font-size: var(--font-size-11xl);
   color: var(--color-white);
   font-family: var(--font-inter);
@@ -160,6 +163,10 @@ a:hover {
   transform: scale(0.98);
 }
 
+.discord:hover {
+  text-decoration: underline;
+}
+
 .frame-wrap {
   z-index: 10;
   top: -15%;
@@ -177,11 +184,14 @@ iframe {
 }
 
 @media screen and (max-width: 960px) {
-  main {
-    height: auto;
-  }
   body {
     overflow: scroll;
+  }
+  main {
+    height: max-content;
+    padding-bottom: 50px;
+    background-size: 300% 300%;
+    background-position: 90% 40%;
   }
   .frame-wrap {
     display: none;
@@ -195,6 +205,7 @@ iframe {
   }
 
   .attribute-container {
+    position: static;
     height: fit-content;
     align-items: center;
     justify-content: center;
@@ -205,13 +216,14 @@ iframe {
     align-items: center;
   }
   #content {
+    margin-top: 40px;
     flex-direction: column !important;
     justify-content: center;
-    left: 50%;
-    top: 120px;
-    width: fit-content;
-    transform: translateX(-50%);
+    align-items: center;
+    width: 100%;
+    position: static;
     gap: 40px;
+
   }
 }
 
